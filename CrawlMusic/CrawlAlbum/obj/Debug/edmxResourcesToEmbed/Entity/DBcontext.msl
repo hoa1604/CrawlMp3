@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrawlModelStoreContainer" CdmEntityContainer="CrawlEntities">
+    <EntitySetMapping Name="AlbumDetails">
+      <EntityTypeMapping TypeName="CrawlModel.AlbumDetail">
+        <MappingFragment StoreEntitySet="AlbumDetail">
+          <ScalarProperty Name="idAlbum" ColumnName="idAlbum" />
+          <ScalarProperty Name="idSong" ColumnName="idSong" />
+          <ScalarProperty Name="song" ColumnName="song" />
+          <ScalarProperty Name="singer" ColumnName="singer" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ListAlbums">
+      <EntityTypeMapping TypeName="CrawlModel.ListAlbum">
+        <MappingFragment StoreEntitySet="ListAlbum">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

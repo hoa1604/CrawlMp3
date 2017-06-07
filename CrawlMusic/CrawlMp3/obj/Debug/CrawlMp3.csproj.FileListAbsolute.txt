@@ -1,0 +1,12 @@
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\CrawlMp3.exe.config
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\CrawlMp3.exe
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\CrawlMp3.pdb
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.csprojResolveAssemblyReference.cache
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.Properties.Resources.resources
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.csproj.GenerateResource.Cache
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.exe
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.pdb
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\HtmlAgilityPack.dll
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\HtmlAgilityPack.pdb
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\bin\Debug\HtmlAgilityPack.xml
+D:\hoctap\GitBash\Crawl\CrawlMp3\CrawlMp3\obj\Debug\CrawlMp3.Form1.resources

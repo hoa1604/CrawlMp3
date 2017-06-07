@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrawlModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AlbumDetail">
+    <Key>
+      <PropertyRef Name="idAlbum" />
+      <PropertyRef Name="idSong" />
+    </Key>
+    <Property Name="idAlbum" Type="Int32" Nullable="false" />
+    <Property Name="idSong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="song" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="singer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ListAlbum" Relationship="Self.FK__AlbumDeta__idAlb__15502E78" FromRole="AlbumDetail" ToRole="ListAlbum" />
+  </EntityType>
+  <EntityType Name="ListAlbum">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AlbumDetails" Relationship="Self.FK__AlbumDeta__idAlb__15502E78" FromRole="ListAlbum" ToRole="AlbumDetail" />
+  </EntityType>
+  <Association Name="FK__AlbumDeta__idAlb__15502E78">
+    <End Role="ListAlbum" Type="Self.ListAlbum" Multiplicity="1" />
+    <End Role="AlbumDetail" Type="Self.AlbumDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ListAlbum">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="AlbumDetail">
+        <PropertyRef Name="idAlbum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CrawlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AlbumDetails" EntityType="Self.AlbumDetail" />
+    <EntitySet Name="ListAlbums" EntityType="Self.ListAlbum" />
+    <AssociationSet Name="FK__AlbumDeta__idAlb__15502E78" Association="Self.FK__AlbumDeta__idAlb__15502E78">
+      <End Role="ListAlbum" EntitySet="ListAlbums" />
+      <End Role="AlbumDetail" EntitySet="AlbumDetails" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
